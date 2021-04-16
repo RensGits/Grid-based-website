@@ -1,3 +1,6 @@
+
+
+
 body {
     display: grid;
     height: 96vh;
@@ -8,13 +11,17 @@ body {
 }
 
 .contentBox{
+    display: block;
+    height: 100%;
     overflow: auto;
     -ms-overflow-style: none; /* IE 10+ */
     scrollbar-width: none; /* Firefox */
     grid-row: 3/10;
     grid-column: 4/10;
-    background-color: gray;
+    
 }
+
+
 
 .menuLinks{
     display: flex;
@@ -77,15 +84,20 @@ body {
 }
 
 .projectBox{
-    
-    height: 100%;
+    margin-bottom: 4%;
+    overflow: hidden;
+    height: auto;
     width: 100%;
 }
 
+
+
 .projectOne{
+    
     height: 100%;
     width: 100%;
     background-color: antiquewhite;
+    
 }
 .projectTwo{
     height: 100%;
@@ -98,7 +110,66 @@ body {
     background-color:lightblue;
 }
 
+.projectFour{
+    height: 100%;
+    width: 100%;
+    background-color:lightpink;
+}
+
+.projectFive{
+    height: 100%;
+    width: 100%;
+    background-color:lightyellow;
+}
 ::-webkit-scrollbar { 
     display: none; /* Chrome Safari */
 }
 
+.projectScrollIndicator{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-row: 4/7;
+    grid-column: 2/3;
+    list-style: none;
+    font-size: 0.75em;
+
+}
+
+.projectImg{
+    
+    
+   object-fit: cover;
+   overflow: hidden;
+   width: 100%;
+   min-height: 100%;
+}
+
+
+
+
+@media screen and (max-width: 1215px) {
+    .contentBox{grid-column: 3/10;}
+    .menuLinks{grid-column: 5/10;}
+    .sLogo{grid-column: 3/4}
+    .projectScrollIndicator{grid-column:1/3; margin: 0; align-items: center; padding: 0;}
+    .contentBoxIndicators{grid-column: 3/5}
+}
+
+@media screen and (max-width: 980px) {
+    .links{padding-left: 8%}
+}
+
+@media screen and (max-width: 760px) {
+    .menuLinks{grid-column: 3/10;}
+}
+
+@media screen and (max-width: 550px){
+    .contentBox{grid-column: 2/10; grid-row: 3/6; overflow: visible; background-color: transparent; margin-bottom: 5%; }
+    .projectScrollIndicator{display: none;}
+    .sSText{display: none;}
+    .sLogo{grid-column: 2/3; position: fixed; z-index: 20; margin-top: 2%;}
+    .projectBox{margin-top:7%;}
+    
+    .menuLinks{position: fixed; justify-content: center; top: 0; padding-left: 0; width: 100%; padding-top: 6%; padding-bottom: 6%; margin:0; background-color: white; font-size:90%;}
+}
