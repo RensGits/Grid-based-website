@@ -1,6 +1,5 @@
 
 
-
 body {
     display: grid;
     height: 96vh;
@@ -38,17 +37,7 @@ body {
 
 }
 
-.contentBoxIndicators{
-    display: flex;
-    grid-row: 10/11;
-    grid-column: 4/6;
-    font-size: 0.7em;
-    
-}
 
-.cBIndicator{
-    padding-right: 15%;
-}
 
 .sLogo{
     display: flex;
@@ -82,6 +71,8 @@ body {
     margin-top: 5%;
     font-size: 1.2em;
 }
+
+
 
 .projectBox{
     margin-bottom: 4%;
@@ -121,8 +112,36 @@ body {
     width: 100%;
     background-color:lightyellow;
 }
+
+
+.projectImg{
+    
+    
+    object-fit: cover;
+    object-position: 0px -100px;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100%;
+    
+}
+ 
 ::-webkit-scrollbar { 
     display: none; /* Chrome Safari */
+}
+
+
+
+
+.contentBoxIndicators{
+    display: flex;
+    grid-row: 10/11;
+    grid-column: 4/6;
+    font-size: 0.7em;
+    
+}
+
+.cBIndicator{
+    padding-right: 15%;
 }
 
 .projectScrollIndicator{
@@ -133,17 +152,36 @@ body {
     grid-column: 2/3;
     list-style: none;
     font-size: 0.75em;
+    
 
 }
 
-.projectImg{
-    
-    
-   object-fit: cover;
-   overflow: hidden;
-   width: 100%;
-   min-height: 100%;
+
+
+
+.projectScrollIndicator1{
+    opacity: 1;
 }
+
+.projectScrollIndicator2{
+    opacity: 0.5;
+}
+.projectScrollIndicator3{
+    opacity: 0.2;
+}
+.projectScrollIndicator4{
+    opacity: 0.1;
+}
+.projectScrollIndicator5{
+    opacity: 0;
+}
+    
+
+
+
+
+
+
 
 
 
@@ -158,10 +196,12 @@ body {
 
 @media screen and (max-width: 980px) {
     .links{padding-left: 8%}
+    .projectImg{object-position: 0px 0px;}
 }
 
 @media screen and (max-width: 760px) {
     .menuLinks{grid-column: 3/10;}
+    .projectImg{object-position: 0px 0px;}
 }
 
 @media screen and (max-width: 550px){
